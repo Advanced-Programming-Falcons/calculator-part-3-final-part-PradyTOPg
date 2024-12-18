@@ -12,14 +12,14 @@ private:
     double price;
 
 public:
-    // Default constructor
+    
     Car() : make(""), model(""), year(0), miles(0), price(0.0) {}
 
-    // Parameterized constructor
+
     Car(string carMake, string carModel, int carYear, int carMiles, double carPrice)
         : make(carMake), model(carModel), year(carYear), miles(carMiles), price(carPrice) {}
 
-    // Destructor
+
     ~Car() {
         cout << "A car has been sold/removed from the inventory: " << make << " " << model << endl;
     }
@@ -38,13 +38,12 @@ public:
     int getMiles() const { return miles; }
     double getPrice() const { return price; }
 
-    // Display car details
+    //  car details
     void displayCar() const {
         cout << year << " " << make << " " << model << " | Miles: " << miles << " | Price: $" << price << endl;
     }
 };
 
-// Function declarations
 void displayMenu();
 void addCar(vector<Car>& inventory);
 void removeCar(vector<Car>& inventory);
@@ -54,7 +53,7 @@ void displayInventory(const vector<Car>& inventory);
 int main() {
     vector<Car> inventory;
 
-    // Pre-populating inventory with some cars
+    // inventory check too good
     inventory.push_back(Car("Toyota", "Camry", 2020, 30000, 20000));
     inventory.push_back(Car("Honda", "Civic", 2019, 20000, 18000));
 
